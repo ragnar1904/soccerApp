@@ -4,15 +4,18 @@ import React from 'react';
 import { StyledToggle } from '../components/Toggle';
 import { Field } from '../containers/Field';
 import { pageContext, useIndexContext } from '../contexts';
+import { Layout } from '../layouts';
 
 const Index: NextPage = () => {
   const pageCtx = useIndexContext();
   return (
     <pageContext.Provider value={pageCtx}>
-      <div>
-        <Field field={pageCtx.field} />
-      </div>
-      <StyledToggle />
+      <Layout>
+        <div>
+          <Field field={pageCtx.field} />
+        </div>
+        <StyledToggle />
+      </Layout>
     </pageContext.Provider>
   );
 };
