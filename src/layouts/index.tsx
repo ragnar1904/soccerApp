@@ -16,7 +16,7 @@ const BaseLayout: React.FC<Props> = props => {
 export const Layout = styled(BaseLayout)`
   display: flex;
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   align-items: stretch;
   & .root-grid {
     display: grid;
